@@ -9,23 +9,38 @@
 <body>
 
   <header>
-    <h1>Wesley Desiderio</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#portfolio">Portfólio</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#contato">Contato</a>
+    <div class="header-left">
+      <h1>Wesley Desiderio</h1>
+    </div>
+
+    <nav class="header-center">
+      <a href="#home" data-i18n="menu.home">Home</a>
+      <a href="#portfolio" data-i18n="menu.portfolio">Portfólio</a>
+      <a href="#servicos" data-i18n="menu.services">Serviços</a>
+      <a href="#contato" data-i18n="menu.contact">Contato</a>
     </nav>
+
+    <div class="header-right">
+      <select id="lang-select">
+        <option value="pt-BR">PT</option>
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+      </select>
+    </div>
   </header>
 
   <section id="home" class="home" data-animar>
-    <h2>Bem-vindo</h2>
-    <p>Sou músico e guitarrista com anos de experiência atuando como session player, colaborando com artistas e projetos diversos. Busco transmitir emoção e qualidade sonora em cada nota, explorando timbres e técnicas que refletem autenticidade e expressão musical.</p>
+    <h2 data-i18n="home.title">Bem-vindo</h2>
+    <p data-i18n="home.text">
+      Sou músico e guitarrista com anos de experiência atuando como session player,
+      colaborando com artistas e projetos diversos. Busco transmitir emoção e qualidade sonora
+      em cada nota, explorando timbres e técnicas que refletem autenticidade e expressão musical.
+    </p>
   </section>
 
   <section id="portfolio" data-animar>
-    <h2>Portfólio</h2>
-    <p>Confira alguns vídeos com performances e timbres que representam meu estilo e abordagem musical.</p>
+    <h2 data-i18n="portfolio.title">Portfólio</h2>
+    <p data-i18n="portfolio.text">Confira alguns vídeos com performances e timbres que representam meu estilo e abordagem musical.</p>
     <div class="portfolio-videos">
       <div class="video-container">
         <iframe src="https://www.youtube.com/embed/0cSEbVHsQ1g" allowfullscreen></iframe>
@@ -40,37 +55,26 @@
   </section>
 
   <section id="servicos" class="servicos" data-animar>
-    <h2>Serviços</h2>
-    <p>Atuo como músico de estúdio e colaborador em projetos musicais de diferentes estilos. Alguns dos serviços oferecidos:</p>
+    <h2 data-i18n="services.title">Serviços</h2>
+    <p data-i18n="services.text">Atuo como músico de estúdio e colaborador em projetos musicais de diferentes estilos. Alguns dos serviços oferecidos:</p>
     <ul>
-      <li>Gravação de guitarras e violões para produções musicais</li>
-      <li>Criação de arranjos e consultoria harmônica</li>
-      <li>Trilhas sonoras e ambientações musicais</li>
-      <li>Participações em sessões remotas</li>
+      <li data-i18n="services.1">Gravação de guitarras e violões para produções musicais</li>
+      <li data-i18n="services.2">Criação de arranjos e consultoria harmônica</li>
+      <li data-i18n="services.3">Trilhas sonoras e ambientações musicais</li>
+      <li data-i18n="services.4">Participações em sessões remotas</li>
     </ul>
   </section>
 
   <section id="contato" data-animar>
-    <h2>Contato</h2>
-    <p>Entre em contato para colaborações, projetos ou dúvidas. Será um prazer conversar.</p>
+    <h2 data-i18n="contact.title">Contato</h2>
+    <p data-i18n="contact.text">Entre em contato para colaborações, projetos ou dúvidas. Será um prazer conversar.</p>
 
     <form action="https://formsubmit.co/wesleydesiderio@outlook.com" method="POST">
       <input type="text" name="name" placeholder="Seu nome" required />
       <input type="email" name="email" placeholder="Seu e-mail" required />
       <textarea name="message" rows="5" placeholder="Escreva sua mensagem" required></textarea>
-      <button type="submit">Enviar</button>
+      <button type="submit" data-i18n="contact.button">Enviar</button>
     </form>
-
-    <p style="margin-top:1rem;">
-      Ou envie um e-mail direto:
-      <a href="mailto:wesleydesiderio@outlook.com" style="color:var(--cor-hover); text-decoration:none;">wesleydesiderio@outlook.com</a>
-    </p>
-
-    <p style="margin-top:1rem;">Perfis de freelancer:
-      <a href="#" style="color:var(--cor-hover); margin-left:6px;">Fiverr</a> |
-      <a href="#" style="color:var(--cor-hover); margin-left:6px;">SoundBetter</a> |
-      <a href="#" style="color:var(--cor-hover); margin-left:6px;">Upwork</a>
-    </p>
   </section>
 
   <footer>
@@ -78,6 +82,5 @@
   </footer>
 
   <script src="js/script.js"></script>
-
 </body>
 </html>
