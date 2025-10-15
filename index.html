@@ -7,13 +7,12 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
   <header>
     <div class="header-left">
-      <h1>Wesley Desiderio</h1>
+      <h1 id="brand" data-i18n="brand">Wesley Desiderio</h1>
     </div>
 
-    <nav class="header-center">
+    <nav class="header-center" aria-label="Main Navigation">
       <a href="#home" data-i18n="menu.home">Home</a>
       <a href="#portfolio" data-i18n="menu.portfolio">Portfólio</a>
       <a href="#servicos" data-i18n="menu.services">Serviços</a>
@@ -21,7 +20,8 @@
     </nav>
 
     <div class="header-right">
-      <select id="lang-select">
+      <label for="lang-select" class="visually-hidden">Idioma</label>
+      <select id="lang-select" aria-label="Selecionar idioma">
         <option value="pt-BR">PT</option>
         <option value="en">EN</option>
         <option value="es">ES</option>
@@ -30,7 +30,7 @@
   </header>
 
   <main>
-    <section id="home" class="home" data-animar>
+    <section id="home" data-animar>
       <h2 data-i18n="home.title">Bem-vindo</h2>
       <p data-i18n="home.text">
         Sou músico e guitarrista com anos de experiência atuando como session player,
@@ -44,18 +44,18 @@
       <p data-i18n="portfolio.text">Confira alguns vídeos com performances e timbres que representam meu estilo e abordagem musical.</p>
       <div class="portfolio-videos">
         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/0cSEbVHsQ1g" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/0cSEbVHsQ1g" allowfullscreen title="Vídeo 1"></iframe>
         </div>
         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/Iw_X2EbgX7M" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/Iw_X2EbgX7M" allowfullscreen title="Vídeo 2"></iframe>
         </div>
         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/3rTdxSo5Tw8" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/3rTdxSo5Tw8" allowfullscreen title="Vídeo 3"></iframe>
         </div>
       </div>
     </section>
 
-    <section id="servicos" class="servicos" data-animar>
+    <section id="servicos" data-animar>
       <h2 data-i18n="services.title">Serviços</h2>
       <p data-i18n="services.text">Atuo como músico de estúdio e colaborador em projetos musicais de diferentes estilos. Alguns dos serviços oferecidos:</p>
       <ul>
@@ -70,17 +70,17 @@
       <h2 data-i18n="contact.title">Contato</h2>
       <p data-i18n="contact.text">Entre em contato para colaborações, projetos ou dúvidas. Será um prazer conversar.</p>
 
-      <form action="https://formsubmit.co/wesleydesiderio@outlook.com" method="POST">
-        <input type="text" name="name" placeholder="Seu nome" required />
-        <input type="email" name="email" placeholder="Seu e-mail" required />
-        <textarea name="message" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+      <form id="contact-form" action="https://formsubmit.co/wesleydesiderio@outlook.com" method="POST" novalidate>
+        <input type="text" name="name" id="name" data-i18n-placeholder="contact.placeholder.name" placeholder="Seu nome" required />
+        <input type="email" name="email" id="email" data-i18n-placeholder="contact.placeholder.email" placeholder="Seu e-mail" required />
+        <textarea name="message" id="message" rows="5" data-i18n-placeholder="contact.placeholder.message" placeholder="Escreva sua mensagem" required></textarea>
         <button type="submit" data-i18n="contact.button">Enviar</button>
       </form>
     </section>
   </main>
 
   <footer>
-    © 2025 Wesley Desiderio — Todos os direitos reservados.
+    <p data-i18n="footer.copy">© 2025 Wesley Desiderio — Todos os direitos reservados.</p>
   </footer>
 
   <script src="js/script.js"></script>
